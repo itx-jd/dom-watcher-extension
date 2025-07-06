@@ -1,16 +1,15 @@
 # 🧩 DOM Watcher - Chrome Extension
 
-A minimalistic and elegant Chrome extension that **monitors DOM changes** on any webpage. Designed specifically to track new `<div>` elements being added inside a specified parent container — like `payouts-block` — and record their numeric values in real time.
+A minimalistic and elegant Chrome extension that **monitors DOM changes** on any webpage. Designed specifically to track new `<div>` elements being added inside a specified parent container — like `payouts-block` — and record values in real time.
 
 ---
 
 ## 📦 Features
 
 ✅ Start/Stop DOM monitoring  
-✅ Automatically extracts numeric values (e.g. from `1.90x`, it stores `1.90`)  
 ✅ Realtime logging with timestamps  
 ✅ Timezone support (e.g. Karachi, London, UTC, etc.)  
-✅ Export recorded data as `.txt` or `.csv`  
+✅ Export recorded data as `.csv`  
 ✅ Refresh, Clear, and Status display  
 ✅ Material Design with responsive icons  
 ✅ Snackbar-style error messages for invalid class names  
@@ -27,9 +26,9 @@ extension/
 ├── manifest.json            # Chrome extension config
 ├── popup.html               # UI of the popup
 ├── popup.js                 # Controls popup behavior
+├── background.js            # Initializes default storage values
 ├── content.js               # Injected script to monitor DOM
 ├── style.css                # Material theme styling
-├── icon.png                 # Icon for extension
 ├── icons/                   # Multiple icon sizes (16, 48, 128)
 └── README.md                # You're reading it!
 ```
@@ -49,7 +48,7 @@ extension/
 
 3. **Click ▶ Start**
    - Starts tracking new children added to that element
-   - Each time a new value like `1.90x` appears, it logs `1.90` with timestamp
+   - Each time a new value like `1.90x` appears, it logs `1.90x` with timestamp
 
 4. **Available Controls:**
    - ⏹ Stop tracking
@@ -69,16 +68,10 @@ Monitoring gambling game UIs that append `<div>` elements like:
 </div>
 ```
 
-This extension captures new `.payout` divs and logs `1.90`.
+This extension captures new `.payout` divs and logs `1.90x`.
 
 ---
 
 ## 🖤 Credits
 
 **Created with love by Jawad**
-
----
-
-## 📜 License
-
-MIT License
