@@ -1,0 +1,159 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 12px;
+  width: 320px;
+  background: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+input, select {
+  width: 100%;
+  padding: 6px 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: white;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+.material-button {
+  flex: 1;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.material-button span.material-icons {
+  font-size: 20px;
+  color: white;
+}
+
+/* Button Colors */
+.green    { background-color: #4CAF50; }
+.red      { background-color: #F44336; }
+.primary  { background-color: #3F51B5; }
+.neutral  { background-color: #9E9E9E; }
+.dark     { background-color: #616161; }
+.black     { background-color: #1F1F1F; }
+
+.material-button:hover {
+  filter: brightness(1.1);
+}
+
+#status {
+  margin: 6px 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+}
+
+.log-container {
+  max-height: 200px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+  margin-top: 12px;
+  font-size: 12px;
+  text-align: center;
+  color: #EC6258;
+  font-weight: bold;
+  animation: shine 2s linear infinite, pulse 1.5s ease-in-out infinite;
+ background: linear-gradient(
+    90deg,
+    #000000,
+    #444444,
+    #888888,
+    #444444,
+    #000000
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shine effect */
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* Pulse effect */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 220px;
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  padding: 12px;
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  z-index: 9999;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+#snackbar.show {
+  visibility: visible;
+  animation: fadein 0.3s, fadeout 0.3s 2.7s;
+}
+
+@keyframes fadein {
+  from { bottom: 10px; opacity: 0; }
+  to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { bottom: 30px; opacity: 1; }
+  to { bottom: 10px; opacity: 0; }
+}
+

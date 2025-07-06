@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Watcher</title>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>DOM Watcher</h1>
+
+  <label for="parentClass">Parent Class:</label>
+  <input type="text" id="parentClass" value="payouts-block" />
+
+  <label for="timezone">Timezone:</label>
+  <select id="timezone">
+    <option value="Asia/Karachi" selected>Pakistan (Karachi)</option>
+    <option value="Asia/Kolkata">India (Kolkata)</option>
+    <option value="UTC">UTC</option>
+    <option value="Europe/London">London</option>
+    <option value="America/New_York">New York</option>
+    <option value="Asia/Dubai">Dubai</option>
+    <option value="Asia/Tokyo">Tokyo</option>
+  </select>
+
+  <!-- 🔘 Button Row -->
+  <div class="button-row">
+    <button id="startBtn" class="material-button black" title="Start">
+      <span class="material-icons">play_arrow</span>
+    </button>
+    <button id="stopBtn" class="material-button black" title="Stop">
+      <span class="material-icons">stop</span>
+    </button>
+    <button id="refreshBtn" class="material-button black" title="Refresh">
+      <span class="material-icons">refresh</span>
+    </button>
+    <button id="exportBtn" class="material-button black" title="Export">
+      <span class="material-icons">file_download</span>
+    </button>
+    <button id="clearBtn" class="material-button black" title="Clear">
+      <span class="material-icons">delete</span>
+    </button>
+  </div>
+
+  <div id="status">Status: <span id="statusValue">Stopped</span></div>
+
+  <!-- Snackbar for errors -->
+  <div id="snackbar"></div>
+
+  <div id="log" class="log-container"></div>
+
+  <footer>Created with 🖤 By Jawad</footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
