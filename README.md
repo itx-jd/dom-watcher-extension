@@ -2,6 +2,8 @@
 
 A minimalistic and elegant Chrome extension that **monitors DOM changes** on any webpage. Designed specifically to track new `<div>` elements being added inside a specified parent container — like `payouts-block` — and record values in real time.
 
+![DOM Watcher Screenshot](screenshots/image1.png)
+
 ---
 
 ## 📦 Features
